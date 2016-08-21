@@ -328,27 +328,7 @@
 <blockquote>
 <p>当x=2 ,代入到上面的函数表达式:<br>f(2) = 4* 2+3 = 11<br>所以f(2) =11</p>
 </blockquote>
-<p>但是,这并不是函数的全部,在函数中,其实变量并没有规定只能是一个数,它可以是一个馒头,还可以是苹果,不知道读者是否对这个函数有这个层次的理解.</p>
-<p>##变量不仅仅是数</p>
-<p>变量x 只能是任意数嘛?</p>
-<p>其实,一个函数,就是一个对应关系.</p>
-<p>读者尝试者将上面表达式X理解为馅饼,4x+3 就是4个馅饼再加上3, (一般来说,单位是统一的,但你非让 它不统一,也无妨),这个结果对应着另外一个东西,那个东西比如说是iphone, 或者说可以理解为4个馅饼加3就对应一个iphone. 这就是所谓的映射关系.</p>
-<p>所以,x ,不仅仅是数,可以是任何的东西,</p>
-<h2 id="变量的本质–-占位符"><a href="#变量的本质–-占位符" class="headerlink" title="变量的本质– 占位符"></a>变量的本质– 占位符</h2><p>函数中为什么变量X,这是一个有趣的问题, 可以自己google一下,看能不能找出答案. 很巧,在”知乎”上可真有人询问这个问题,可以阅读.</p>
-<p>我也不清楚原因,不过,我清楚地知道,变量可以用x,也可以用别的符号,比如y,z,k,i,j.</p>
-<p>变量在本质上就是一个占位符,这就是一针见血的理解.</p>
-<p>什么是占位符? 就是先把那个位置用变量占上,表示这里有一个东西,至于这个位置放什么东西,以后再说,反正用一个符号先占着这个位置.</p>
-<p>通常小写字母来命名python中的变量,可以下划线连接多个单词,u:alpha, x, j ,p_beta ,这些都可以作为python的变量</p>
-<p>下面是纯粹的数学方式,在python中建立函数,</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">2</span></span><br><span class="line">y = <span class="number">3</span> * a  +<span class="number">2</span></span><br><span class="line">y</span><br></pre></td></tr></table></figure>
-<p>这种方式建立的函数,跟在初中数学中的学习没有任何区别,在纯粹数学中,也常这么用.这种方式在python中还有效嘛?</p>
-<p>既然在上面已建立一个函数,改变变量a的值,那么得到什么结果.</p>
-  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">a= <span class="number">3</span></span><br><span class="line">y</span><br><span class="line"><span class="number">8</span></span><br></pre></td></tr></table></figure>
-<p>是不是很奇怪,为什么后面已经让a等于3,结果Y还是8</p>
-<p>还记得前面已经学习过的关于”变量”赋值的原理吗? a = 2 的含义是将2这个对象贴上变量a的标签,进过计算,得到了8,之后变量Y引用了对象8.当变量a引用的对象修改为3的时候,但是y引用的对象还没有变,所以还是8.再计算一次,Y的连接对象就变了.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">3</span></span><br><span class="line">y</span><br><span class="line"><span class="number">8</span></span><br><span class="line">y = <span class="number">3</span> * a +<span class="number">2</span></span><br><span class="line">y</span><br><span class="line"><span class="number">11</span></span><br></pre></td></tr></table></figure>
-<p>特别注意, 如果没有先 a = 3 , 就直接下函数表达式,像这样,就会报错.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">y = <span class="number">3</span> * a +<span class="number">2</span></span><br><span class="line"></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">  NameError: name <span class="string">'a'</span> <span class="keyword">is</span> <span class="keyword">not</span> defined</span><br></pre></td></tr></table></figure>
+<p>但是,这并不是函数的全部,在函数中,其实变量并没有规定只能是一个数,它可以是一个馒头,还可以是苹果,不知道读者是否对这个函数有这个层次的理解.<br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/08/18/python_cc_def1/#more" rel="contents">
               阅读全文 &raquo;
@@ -402,7 +382,7 @@
               
                 
                 <a class="post-title-link" href="/2016/08/05/unnbtu_python/" itemprop="url">
-                  ubuntu Serer下的图形界面远程安装及Python安装
+                  ubuntu Server下的图形界面远程安装及Python安装
                 </a>
               
             
@@ -647,6 +627,137 @@
             
               
                 
+                <a class="post-title-link" href="/2016/07/17/HowtoStarup/" itemprop="url">
+                  当我创业时,我会想起什么?
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-17T00:00:00+08:00" content="2016-07-17">
+              2016-07-17
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/管理/" itemprop="url" rel="index">
+                    <span itemprop="name">管理</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/17/HowtoStarup/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/17/HowtoStarup/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>当我创业时,我会想起什么?</p>
+</blockquote>
+<p>前几日，和一个好友闲聊，两人同时创业，各自的方向有所不同，跟友人约好写一篇我的历程给她看看。</p>
+<ol>
+<li><p>创业的第一个感悟:</p>
+<ul>
+<li><p>爱惜身体<br>有一餐没一餐，过夜生活（如白天苦战，夜晚苦玩）,随便吃便当. <del>长此以往,一定会疾病缠身.</del></p>
+<p><code>休息好,吃好,吃干净</code></p>
+<p>别学我, 现在一身病,身体是自己的,能爱护的,也只有自己.这个最为重要.</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/17/HowtoStarup/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/07/17/Mac-command2/" itemprop="url">
                   MAC的命令行瑞士军刀篇(2)
                 </a>
@@ -737,137 +848,6 @@
 </ol>
 
           
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/17/HowtoStarup/" itemprop="url">
-                  当我创业时,我会想起什么?
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-17T00:00:00+08:00" content="2016-07-17">
-              2016-07-17
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/管理/" itemprop="url" rel="index">
-                    <span itemprop="name">管理</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/07/17/HowtoStarup/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/17/HowtoStarup/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>当我创业时,我会想起什么?</p>
-</blockquote>
-<p>前几日，和一个好友闲聊，两人同时创业，各自的方向有所不同，跟友人约好写一篇我的历程给她看看。</p>
-<ol>
-<li><p>创业的第一个感悟:</p>
-<ul>
-<li><p>爱惜身体<br>有一餐没一餐，过夜生活（如白天苦战，夜晚苦玩）,随便吃便当. <del>长此以往,一定会疾病缠身.</del></p>
-<p><code>休息好,吃好,吃干净</code></p>
-<p>别学我, 现在一身病,身体是自己的,能爱护的,也只有自己.这个最为重要.</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/17/HowtoStarup/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
         
       
     </div>
