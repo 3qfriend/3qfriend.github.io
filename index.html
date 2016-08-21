@@ -275,8 +275,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/python-ubuntu/" itemprop="url" rel="index">
-                    <span itemprop="name">python ubuntu</span>
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
                   </a>
                 </span>
 
@@ -316,8 +316,7 @@
 
       
         
-          
-            <h3 id="函数-1"><a href="#函数-1" class="headerlink" title="函数(1)"></a>函数(1)</h3><p>(本文抄写于老齐python教程)</p>
+          <h3 id="函数-1"><a href="#函数-1" class="headerlink" title="函数(1)"></a>函数(1)</h3><p>(本文抄写于老齐python教程)</p>
 <p>  函数, 对于人类来讲,能够发展哦这个数学思维层次,是一个飞跃,可以说,它的提出, 直接加快了现代科技和社会的发展.不论是现代的任何科技门类,乃至于经济学,政治学,社会学等.都已经普遍使用函数.</p>
 <p>  下面一段来自维基百科(本教程中,大量来源于维基百科)</p>
 <blockquote>
@@ -350,87 +349,11 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">3</span></span><br><span class="line">y</span><br><span class="line"><span class="number">8</span></span><br><span class="line">y = <span class="number">3</span> * a +<span class="number">2</span></span><br><span class="line">y</span><br><span class="line"><span class="number">11</span></span><br></pre></td></tr></table></figure>
 <p>特别注意, 如果没有先 a = 3 , 就直接下函数表达式,像这样,就会报错.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">y = <span class="number">3</span> * a +<span class="number">2</span></span><br><span class="line"></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">  NameError: name <span class="string">'a'</span> <span class="keyword">is</span> <span class="keyword">not</span> defined</span><br></pre></td></tr></table></figure>
-<p>注意看错误提示, a 是一个变量, 提示告诉我们变量没有定义.显然,如果函数中使用某个变量,不得不提前定义出来,定义方法就是给这个变量赋值.</p>
-<p>用纯粹数学的方式建立函数,对python非常不适合,如果非要找个理由,我想可能是”=”造成,这个符号在数学是等号,但是在python中,包括所有的高级编程语言中,是”赋值”.这是我的肤浅理解. 更深层的缘由,还在于计算机处理数据的原理与人不同.所以,需要一种新的定义函数的方式.</p>
-<h3 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h3><p>在python中, 规定了一个定义函数的格式,下面的举例就是一个函数,以这个函数为例说明定义函数的格式和调用函数的方法.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#! /usr/bin/env python</span></span><br><span class="line"><span class="comment">#coding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add_function</span><span class="params">(a,b)</span>:</span></span><br><span class="line">  c =a + b</span><br><span class="line">  <span class="keyword">return</span> c</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ = <span class="string">"__main__"</span>:</span><br><span class="line">  result = add_function(<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">  print(result)</span><br></pre></td></tr></table></figure>
-<p>然后将文件保存,我把他命名为2010.py,你根据自己的喜好取个名字:</p>
-<p>然后我就进入到那个文件夹,运行这个文件,出现下面的结果:</p>
-<p><img src="https://github.com/qiwsir/StarterLearningPython/blob/master/2images/20102.png" alt="error"></p>
-<p>下面开始庖丁解牛:</p>
-<ul>
-<li><p>def: 这里是函数的开始,在声明要建立一个函数的时候,一定要是使用def ,意思就是告诉计算机,这里要声明一个函数,def 做在那一行, 包括后面的add_function(a,b),被称为函数头.</p>
-</li>
-<li><p>add_function: 这是函数名称,取名字是有讲究的,就好比你的名字一样,在python中取名的讲究也是一定意义.能够从函数中看出这个函数是用来干什么的. 从add_function这个名字中,是不是看出她hi用来计算加法的呢?</p>
-</li>
-<li><p>(a,b): 这是参数列表,要写成括号里,这是一个变量(参数)列表,其中的变量(参数)指向函数的输入.在这个例子中,函数有两项输入.分别a和b. 在通常的函数中,输入项没有限定,可以是任意数量,当然也可以没有输入. 这时候的参数列表就是一对(). 但是,必须有这个圆括号.</p>
-</li>
-<li><p>: , 这个冒号也非常重要,如果少了,就会报错,这是和前面的语句类似,冒号表示函数头结束.</p>
-</li>
-<li><p>c = a + b ,这一行开始,这就是函数体.函数体使一个缩进了四个空格的代码快.完成你所需要的工作,在这个代码中,可以使用函数头中的变量,当然,不使用也可以. 缩进四个空格,这是PYTHON的规定.要牢记,这句话是将函数头的变量相加.</p>
-</li>
-<li><p>return c : 还是提醒注意,缩进四个空格. return语句执行时,python会跳出当前的函数并返回到调用这个函数的地方.在下面,有调用这个函数的地方 result = add_function(2,3) .但是,函数中的return 也不是必须要写的.如果不写,python将认为以return None作为结束的.如果你的函数没有None,事实上,在调用的时候,python 也会返回一个结果. 这个结果就是None.</p>
-</li>
-</ul>
-<ul>
-<li><p>if <strong>name</strong> = ‘<strong>main</strong>‘ : 这句话先不解释.</p>
-</li>
-<li><p>result = add_function(2,3) : 这是调用前面建立的函数,并且传入值 a =2 和 b=3 ,仔细观察传入参数的方法, 就是相当于2放在a那个位置,3放在b 那个位置 . 当函数运行时,遇到了return语句,u见过函数中的结果返回到这里.赋值给reuslt .这里需要注意的是, 相当于,</p>
-</li>
-</ul>
-<p>解牛完毕: 做个总结</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> 函数名<span class="params">(参数<span class="number">1</span>,参数<span class="number">2</span>,...)</span>:</span></span><br><span class="line">  函数体(语句)</span><br></pre></td></tr></table></figure>
-<p>是不是样式很简单呢?</p>
-<ul>
-<li>函数名的命名规则要符合python命名要求.一般都用小写字母,单下划线,数字组合.</li>
-<li>def 是 定义函数的关键词,这个简写来自英文单词define</li>
-<li>函数名后面是圆括号,括号后面,可以有参数列表,也可以没有参数.</li>
-<li>千万不要忘记括号后面的冒号</li>
-<li>函数体(语句块) ,相对于def缩进,按照python习惯,缩进四个空格.</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">name</span><span class="params">()</span>:</span></span><br><span class="line">    print(qwh)</span><br><span class="line"></span><br><span class="line">name()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x,y)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x+y</span><br></pre></td></tr></table></figure>
-<p>注意上面的add(x,y)函数,在这个函数中,没有特别规定参数x,y的类型,其实这句话就是错的,还记得前面已经多次提到,在python中,变量无类型,只有对象才有类型,这句话应该说成,x,y并没有严格规定其所引用的对象类型,这是python跟JAVA很大的区别.</p>
-<p>为什么? 不要忘记,这里的所谓参数,跟前面说的变量,本质上是一回事. 只有当用到该变量的时候,才建立变量与对象引用的关系,否则,关系不建立,而对象才有类型. 那么add(x,y)函数中,x,y在引用对象之前,是完全飘浮的.没有贴在任何对象上.换句话它们有可能引用任何对象,只要后面的运算许可,如果后面的运算不许可,才会报错.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">add (<span class="string">'q'</span>,<span class="string">'b'</span>)</span><br><span class="line">qb</span><br><span class="line"></span><br><span class="line">add(<span class="string">'x'</span>,<span class="number">2</span>)</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">2</span>, <span class="keyword">in</span> add</span><br><span class="line">TypeError: cannot concatenate <span class="string">'str'</span> <span class="keyword">and</span> <span class="string">'int'</span> objects</span><br></pre></td></tr></table></figure>
-<p>从实验结果看,x+y的意义完全取决于对象的类型. 在python中,将这种依赖关系,称之为<code>多态</code>. python为对象编写接口,而不是为了数据类型.</p>
-<p>此外,也可以将函数通过赋值语句,与某个变量建立引用关系:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">result = add(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">result</span><br></pre></td></tr></table></figure>
-<p>在这里,其实解释了函数的一个秘密. add(x,y)在被运行之前,计算机内存是不存在的,直到代码运行到这里的时候,在计算机中,就建立了一个对象.这就如前面所学的字符串一样,列表等类型的对象一样,运行<br>add(x,y)之后,也建立 一个add(x,y)的对象. 这个对象与result建立了引用关系,并且add(x,y)将运算结果返回.于是,通过result就可以查看到运行结果.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">add</span><br><span class="line">&lt;function add at <span class="number">0x00000000007BAC80</span>&gt;</span><br></pre></td></tr></table></figure>
-<p>如果使用add(x,y)的样式,是调用这个函数,如果只写函数的名字,不写参数列表,我们得到的是,函数在内存汇总的储蓄信息.</p>
-<p>``Python</p>
-<p>type(add)</p>
-<p><class 'function'=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">这说明add是一个对象, 因为对象才有类型,并且它是一个function类. 按照我们的经验,对象都可以与另一个变量建立引用关系. 从而通过这个变量范围访问函数.</span><br><span class="line"></span><br><span class="line">```Python</span><br><span class="line">r = add</span><br><span class="line">r(3,4)</span><br></pre></td></tr></table></figure></class></p>
-<p>通过赋值语句,变量R与函数对象建立引用关系后,就可以做所有add(x,y)能做的事情.因为r就是这个函数的代表.</p>
-<h3 id="关于命名"><a href="#关于命名" class="headerlink" title="关于命名"></a>关于命名</h3><p>到现在为止,我们已经接触过变量的命名, 函数的命名问题.</p>
-<ul>
-<li>文件名:全小写,可使用下划线.</li>
-<li>函数名: 小写,可以用下划线增加可读性.</li>
-<li>函数的参数:命名方式同变量</li>
-<li>变量: 变量名全部小写.</li>
-</ul>
-<h3 id="调用函数"><a href="#调用函数" class="headerlink" title="调用函数"></a>调用函数</h3><p>为什么要写函数? 从理论上讲,不用函数,也能够编程,  之所以使用函数,主要是:</p>
-<ol>
-<li>降低编程难度. 通常将一个复杂的大问题,分解成一个系列更简单的小问题,然后将小问题继续划分成更小的问题. 当问题细化为足够简单的时候, 就可以分而治之.</li>
-<li>代码重用.</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deg add(x,y):</span><br><span class="line">  print(<span class="string">"x=&#123;&#125;"</span>.format(x))</span><br><span class="line">  print(<span class="string">"y=&#123;&#125;"</span>.format(y))</span><br><span class="line">  <span class="keyword">return</span> x+y</span><br></pre></td></tr></table></figure>
-<p>所谓调用,最关键是要弄清楚如何给函数的参数赋值,这里就是参数次数赋值,根据参数的位置,值与之对应.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add(x=<span class="number">10</span>,y=<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
-<p>也可以,直接把赋值语句写到里面,就明确 参数和对象的关系,当然,这时候的顺序就不重要了.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add(y=<span class="number">3</span>,x=<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
-<p>在定义函数的时候, 参数可以像前面那样,等待赋值. 也可以定义的时候,就赋给一个默认值.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">times</span><span class="params">(x,y=<span class="number">2</span>)</span>:</span></span><br><span class="line">  print(<span class="string">"x=&#123;&#125;"</span>.format(x))</span><br><span class="line">  print(<span class="string">"y=&#123;&#125;"</span>.format(y))</span><br><span class="line"> <span class="keyword">return</span> x * y</span><br><span class="line"></span><br><span class="line"> times(<span class="number">3</span>)</span><br><span class="line"> x=<span class="number">3</span></span><br><span class="line"> y=<span class="number">2</span></span><br><span class="line"> <span class="number">6</span></span><br></pre></td></tr></table></figure>
-<p>如果不给那个默认值的参数传递值,那么它就是使用默认的值.如果给它传一个,他就采用新赋给他的值.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">times(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line"><span class="number">12</span></span><br><span class="line"></span><br><span class="line">times(<span class="string">'abc'</span>)</span><br><span class="line"></span><br><span class="line">abcabc</span><br></pre></td></tr></table></figure>
-<p>注意,上面引用了一个字符串, 证明了python的多态性, 回想起来函数的对象引用同样是这个道理.</p>
-<p>在程序中调用函数, 需要注意”先定义,后使用”</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">  print(<span class="string">'hello world'</span>)</span><br><span class="line">  bar()</span><br></pre></td></tr></table></figure>
-<p>如果调用foo(),就会报错.所以必须先定义.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bar</span><span class="params">()</span>:</span></span><br><span class="line">  <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-<p>bar()定义在foo后面,只要是定义了, <code>无关先后,就可以使用.</code></p>
-<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项:"></a>注意事项:</h3>
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/18/python_cc_def1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -549,107 +472,6 @@
         
           
             
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/25/test/" itemprop="url">
-                  未命名
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-25T11:23:20+08:00" content="2016-07-25">
-              2016-07-25
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/07/25/test/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/25/test/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <table class="zhwd-mobile-fullwidth" style="background-color: rgb(247, 249, 250);" width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="zhwd-mobile-fullwidth" width="100%" align="center"><table class="zhwd-mobile-fullwidth" width="552" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style="color: rgb(247, 249, 250); font-size: 0px; line-height: 0px;" height="0"><br></td></tr><tr class="zhwd-mobile-hide"><td><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style="color: rgb(182, 194, 204); font-size: 12px;" align="right">如果不想继续接收来自群里的邮件， 请点击<a target="_blank" href="http://www.go-enter.cn/" label="unsubscribe" style="color: rgb(138, 147, 155); text-decoration: none;">&nbsp;退订</a></td><td width="35"><br></td></tr><tr><td style="font-size: 0px; line-height: 0px;" height="20">&nbsp;</td></tr></tbody></table></td></tr><tr><td><table class="zhwd-mobile-no-radius" style="border: 1px solid rgb(222, 222, 222); margin: 0px auto; background-color: rgb(255, 255, 255);" cellpadding="0" cellspacing="0"><tbody><tr><td class="zhwd-mobile-collapse-padding" style="padding: 45px 35px;" align="left">&nbsp;<table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="zhwd-high-res-img-wrap zhwd-zhihu-logo" style="width: 51px; height: 23px; vertical-align: middle;" valign="middle" width="51"><br></td><td style="color: rgb(32, 33, 33); font-size: 24px;" align="left">&nbsp; &nbsp;每周日本工厂-贸易群精选</td><td style="color: rgb(103, 107, 109); font-size: 13px;" valign="middle" align="right">第 1 期</td></tr></tbody></table></td></tr><tr><td style="font-size: 0px; line-height: 0px;" height="45">&nbsp;</td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style="font-size: 0px; line-height: 0px; border-top: 1px solid rgb(241, 244, 246);" height="35">&nbsp;</td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><a target="_blank" href="http://www.go-enter.cn/" style="font-size: 17px; font-weight: bold; text-decoration: none; color: rgb(34, 85, 153); border: medium none; outline: medium none;">南通悍马-需求帽子,发箍,背包</a></td></tr><tr><td><table class="zhwd-mobile-no-fullwidth" width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style="font-size: 0px; line-height: 0px;" height="15">&nbsp;</td></tr><tr><td width="22"><img src="javascript:;" style="outline: medium none; border: medium none; margin: 0px; padding: 0px; display: block;" height="22" width="22"></td><td width="8"></td><td align="left"><span style="font-size: 13px; color: rgb(102, 102, 102);"><span style="font-weight: bold;">孙经理,外贸公司</span>，群认证</span></td><td class="zhwd-mobile-hide" style="color: rgb(103, 107, 109); font-size: 13px;" align="right"><br></td></tr><tr><td style="font-size: 0px; line-height: 0px;" height="12">&nbsp;</td></tr></tbody></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style=""><a target="_blank" href="http://tmail.zhihu.com/t?u=aHR0cDovL3d3dy56aGlodS5jb20vcXVlc3Rpb24vMzY2MTQzNTQvYW5zd2VyLzk0MDMzMjc2P3V0bV9jYW1wYWlnbj13ZWVrbHkyMjMmdXRtX3NvdXJjZT13ZWVrbHktZGlnZXN0JnV0bV9tZWRpdW09ZW1haWw%3D&amp;i=1004596561&amp;l=zhihu&amp;s=4&amp;c=aT0xMDA0NTk2NTYxJmw9emhpaHUmcz00" style="font-size: 13px; line-height: 22px; text-decoration: none; color: rgb(51, 51, 51); display: block;">需要采购的清单见全文.请于本人联系.<span style="display: inline-block; color: rgb(34, 85, 153);">&nbsp;图片请点击全文</span></a></td><td class="zhwd-mobile-hide" width="35">&nbsp;</td><td class="zhwd-mobile-hide" style="vertical-align: top;" valign="top"><br></td></tr></tbody></table></td></tr><tr><td style="font-size: 0px; line-height: 0px;" height="28">&nbsp;</td></tr></tbody></table></td></tr><tr><td style="font-size: 0px; line-height: 0px; border-top: 1px solid rgb(241, 244, 246);" height="35">&nbsp;</td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><a style="font-size: 17px; font-weight: bold; text-decoration: none; color: rgb(34, 85, 153); border: medium none; outline: medium none;">南通翔腾-需要找衬衫的工厂合作</a></td></tr><tr><td><table class="zhwd-mobile-no-fullwidth" width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style="font-size: 0px; line-height: 0px;" height="15">&nbsp;</td></tr><tr><td width="22"><img src="javascript:;" style="outline: medium none; border: medium none; margin: 0px; padding: 0px; display: block;" height="22" width="22"></td><td width="8"></td><td align="left"><span style="font-size: 13px; color: rgb(102, 102, 102);"><span style="font-weight: bold;">何总</span>，外贸公司,群认证</span></td><td class="zhwd-mobile-hide" style="color: rgb(103, 107, 109); font-size: 13px;" align="right"><br></td></tr><tr><td style="font-size: 0px; line-height: 0px;" height="12">&nbsp;</td></tr></tbody></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style=""><a target="_blank" href="http://tmail.zhihu.com/t?u=aHR0cDovL3d3dy56aGlodS5jb20vcXVlc3Rpb24vMjE0NDQzMjMvYW5zd2VyLzExMTE1MTU0OD91dG1fY2FtcGFpZ249d2Vla2x5MjIzJnV0bV9zb3VyY2U9d2Vla2x5LWRpZ2VzdCZ1dG1fbWVkaXVtPWVtYWls&amp;i=1004596561&amp;l=zhihu&amp;s=8&amp;c=aT0xMDA0NTk2NTYxJmw9emhpaHUmcz04" style="font-size: 13px; line-height: 22px; text-decoration: none; color: rgb(51, 51, 51); display: block;">需求专业做衬衫的工厂,1个月1万件左右,仔和格子面料的比较多，要求一般。<span style="display: inline-block; color: rgb(34, 85, 153);">&nbsp;</span></a></td><td class="zhwd-mobile-hide" width="35">&nbsp;</td><td class="zhwd-mobile-hide" style="vertical-align: top;" valign="top"><br></td></tr></tbody></table></td></tr><tr><td style="font-size: 0px; line-height: 0px;" height="28">&nbsp;</td></tr></tbody></table></td></tr><tr><td style="font-size: 0px; line-height: 0px; border-top: 1px solid rgb(241, 244, 246);" height="35">&nbsp;</td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><a style="font-size: 17px; font-weight: bold; text-decoration: none; color: rgb(34, 85, 153); border: medium none; outline: medium none;">南通成润-需要找正统西服的工厂</a></td></tr><tr><td><table class="zhwd-mobile-no-fullwidth" width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style="font-size: 0px; line-height: 0px;" height="15">&nbsp;</td></tr><tr><td width="22"><img src="javascript:;" style="outline: medium none; border: medium none; margin: 0px; padding: 0px; display: block;" height="22" width="22"></td><td width="8"></td><td align="left"><span style="font-size: 13px; color: rgb(102, 102, 102);"><span style="font-weight: bold;">徐总</span>，外贸公司,群认证</span></td><td class="zhwd-mobile-hide" style="color: rgb(103, 107, 109); font-size: 13px;" align="right"><br></td></tr><tr><td style="font-size: 0px; line-height: 0px;" height="12">&nbsp;</td></tr></tbody></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style=""><a target="_blank" href="http://tmail.zhihu.com/t?u=aHR0cDovL3d3dy56aGlodS5jb20vcXVlc3Rpb24vMjA2NjE0ODIvYW5zd2VyLzIwNTM4NDIzP3V0bV9jYW1wYWlnbj13ZWVrbHkyMjMmdXRtX3NvdXJjZT13ZWVrbHktZGlnZXN0JnV0bV9tZWRpdW09ZW1haWw%3D&amp;i=1004596561&amp;l=zhihu&amp;s=12&amp;c=aT0xMDA0NTk2NTYxJmw9emhpaHUmcz0xMg%3D%3D" style="font-size: 13px; line-height: 22px; text-decoration: none; color: rgb(51, 51, 51); display: block;">详细可以与本人联系. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a></td><td class="zhwd-mobile-hide" width="35">&nbsp;</td><td class="zhwd-mobile-hide" style="vertical-align: top;" valign="top"><br></td></tr></tbody></table></td></tr><tr><td style="font-size: 0px; line-height: 0px;" height="28">&nbsp;</td></tr></tbody></table></td></tr><tr><td style="font-size: 0px; line-height: 0px; border-top: 1px solid rgb(241, 244, 246);" height="35">&nbsp;</td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><a style="font-size: 17px; font-weight: bold; text-decoration: none; color: rgb(34, 85, 153); border: medium none; outline: medium none;">南通通贸-需要麂皮绒女装夹克的工厂</a></td></tr><tr><td><table class="zhwd-mobile-no-fullwidth" width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style="font-size: 0px; line-height: 0px;" height="15">&nbsp;</td></tr><tr><td width="22"><img src="javascript:;" style="outline: medium none; border: medium none; margin: 0px; padding: 0px; display: block;" height="22" width="22"></td><td width="8"></td><td align="left"><span style="font-size: 13px; color: rgb(102, 102, 102);">吴总，外贸公司,群认证</span></td><td class="zhwd-mobile-hide" style="color: rgb(103, 107, 109); font-size: 13px;" align="right"><br></td></tr><tr><td style="font-size: 0px; line-height: 0px;" height="12">&nbsp;</td></tr></tbody></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style=""><a target="_blank" href="http://tmail.zhihu.com/t?u=aHR0cDovL3d3dy56aGlodS5jb20vcXVlc3Rpb24vMzcxMTkyNDUvYW5zd2VyLzExMDcwMDQzND91dG1fY2FtcGFpZ249d2Vla2x5MjIzJnV0bV9zb3VyY2U9d2Vla2x5LWRpZ2VzdCZ1dG1fbWVkaXVtPWVtYWls&amp;i=1004596561&amp;l=zhihu&amp;s=16&amp;c=aT0xMDA0NTk2NTYxJmw9emhpaHUmcz0xNg%3D%3D" style="font-size: 13px; line-height: 22px; text-decoration: none; color: rgb(51, 51, 51); display: block;">大致需求1400件.详细可以与本人联系.…<span style="display: inline-block; color: rgb(34, 85, 153);">&nbsp;</span></a></td><td class="zhwd-mobile-hide" width="35"><br></td><td class="zhwd-mobile-hide" style="vertical-align: top;" valign="top"><br></td></tr></tbody></table></td></tr><tr><td style="font-size: 0px; line-height: 0px;" height="28">&nbsp;</td></tr></tbody></table></td></tr><tr><td style="font-size: 0px; line-height: 0px; border-top: 1px solid rgb(241, 244, 246);" height="35">&nbsp;</td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><a target="_blank" href="http://tmail.zhihu.com/t?u=aHR0cDovL3d3dy56aGlodS5jb20vcXVlc3Rpb24vNDgwMTYwNTgvYW5zd2VyLzExMDczODk3OT91dG1fY2FtcGFpZ249d2Vla2x5MjIzJnV0bV9zb3VyY2U9d2Vla2x5LWRpZ2VzdCZ1dG1fbWVkaXVtPWVtYWls&amp;i=1004596561&amp;l=zhihu&amp;s=18&amp;c=aT0xMDA0NTk2NTYxJmw9emhpaHUmcz0xOA%3D%3D" style="font-size: 17px; font-weight: bold; text-decoration: none; color: rgb(34, 85, 153); border: medium none; outline: medium none;">南通北嘉</a><a style="font-size: 17px; font-weight: bold; text-decoration: none; color: rgb(34, 85, 153); border: medium none; outline: medium none;">--需求针织,印花,提花面料</a></td></tr><tr><td><table class="zhwd-mobile-no-fullwidth" width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style="font-size: 0px; line-height: 0px;" height="15">&nbsp;</td></tr><tr><td width="22"><img src="javascript:;" style="outline: medium none; border: medium none; margin: 0px; padding: 0px; display: block;" height="22" width="22"></td><td width="8"></td><td align="left"><span style="font-size: 13px; color: rgb(102, 102, 102);">顾总，外贸公司, 群认证</span></td><td class="zhwd-mobile-hide" style="color: rgb(103, 107, 109); font-size: 13px;" align="right"><br></td></tr><tr><td style="font-size: 0px; line-height: 0px;" height="12">&nbsp;</td></tr></tbody></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style=""><a target="_blank" href="http://tmail.zhihu.com/t?u=aHR0cDovL3d3dy56aGlodS5jb20vcXVlc3Rpb24vNDgwMTYwNTgvYW5zd2VyLzExMDczODk3OT91dG1fY2FtcGFpZ249d2Vla2x5MjIzJnV0bV9zb3VyY2U9d2Vla2x5LWRpZ2VzdCZ1dG1fbWVkaXVtPWVtYWls&amp;i=1004596561&amp;l=zhihu&amp;s=20&amp;c=aT0xMDA0NTk2NTYxJmw9emhpaHUmcz0yMA%3D%3D" style="font-size: 13px; line-height: 22px; text-decoration: none; color: rgb(51, 51, 51); display: block;">需求小订单面料商. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="display: inline-block; color: rgb(34, 85, 153);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></a></td><td class="zhwd-mobile-hide" width="35">&nbsp;</td><td class="zhwd-mobile-hide" style="vertical-align: top;" valign="top"><br></td></tr></tbody></table></td></tr><tr><td style="font-size: 0px; line-height: 0px;" height="28">&nbsp;</td></tr></tbody></table></td></tr><tr><td style="font-size: 0px; line-height: 0px; border-top: 1px solid rgb(241, 244, 246);" height="35">&nbsp;</td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><a target="_blank" href="http://www.go-enter.cn/" style="font-size: 17px; font-weight: bold; text-decoration: none; color: rgb(34, 85, 153); border: medium none; outline: medium none;">南通隆润-需要毛纺,弹力</a><a target="_blank" href="http://tmail.zhihu.com/t?u=aHR0cDovL3d3dy56aGlodS5jb20vcXVlc3Rpb24vMjc4MDk4OTQvYW5zd2VyLzExMDI2OTcwNj91dG1fY2FtcGFpZ249d2Vla2x5MjIzJnV0bV9zb3VyY2U9d2Vla2x5LWRpZ2VzdCZ1dG1fbWVkaXVtPWVtYWls&amp;i=1004596561&amp;l=zhihu&amp;s=22&amp;c=aT0xMDA0NTk2NTYxJmw9emhpaHUmcz0yMg%3D%3D" style="text-decoration: none; color: rgb(34, 85, 153); border: medium none; outline: medium none;">平绒</a><a style="text-decoration: none; color: rgb(34, 85, 153); border: medium none; outline: medium none;">面料</a><table class="zhwd-mobile-no-fullwidth" width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style="font-size: 0px; line-height: 0px;" height="15">&nbsp;</td></tr><tr><td width="22"><img src="javascript:;" style="border: medium none; outline: medium none; margin: 0px; padding: 0px; display: block;" height="22" width="22"></td><td width="8"></td><td align="left"><span style="font-size: 13px; color: rgb(102, 102, 102);"><span style="font-weight: bold;">周总,外贸公司,群认证</span></span></td><td class="zhwd-mobile-hide" style="color: rgb(103, 107, 109); font-size: 13px;" align="right"><br></td></tr><tr><td style="font-size: 0px; line-height: 0px;" height="12">&nbsp;</td></tr></tbody></table><br></td></tr><tr><td><table class="zhwd-mobile-no-fullwidth" width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style="font-size: 0px; line-height: 0px;" height="12">&nbsp;</td></tr></tbody></table></td></tr><tr><td style="font-size: 0px; line-height: 0px;" height="28">&nbsp;</td></tr></tbody></table></td></tr><tr><td style="font-size: 0px; line-height: 0px; border-top: 1px solid rgb(241, 244, 246);" height="35">&nbsp;</td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>人员招聘-南通真信 (年金7W-8W)</td></tr><tr><td><table class="zhwd-mobile-no-fullwidth" width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style="font-size: 0px; line-height: 0px;" height="15">&nbsp;</td></tr><tr><td width="22"><img src="javascript:;" style="outline: medium none; border: medium none; margin: 0px; padding: 0px; display: block;" height="22" width="22"></td><td width="8"></td><td align="left"><span style="font-size: 13px; color: rgb(102, 102, 102);"><span style="font-weight: bold;">薛总,外贸公司,群认证</span></span></td><td class="zhwd-mobile-hide" style="color: rgb(103, 107, 109); font-size: 13px;" align="right"><br></td></tr><tr><td style="font-size: 0px; line-height: 0px;" height="12">&nbsp;</td></tr></tbody></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style=""><a target="_blank" href="http://tmail.zhihu.com/t?u=aHR0cDovL3d3dy56aGlodS5jb20vcXVlc3Rpb24vNDg1NDUwMDAvYW5zd2VyLzExMTQyNjkxNT91dG1fY2FtcGFpZ249d2Vla2x5MjIzJnV0bV9zb3VyY2U9d2Vla2x5LWRpZ2VzdCZ1dG1fbWVkaXVtPWVtYWls&amp;i=1004596561&amp;l=zhihu&amp;s=27&amp;c=aT0xMDA0NTk2NTYxJmw9emhpaHUmcz0yNw%3D%3D" style="font-size: 13px; line-height: 22px; text-decoration: none; color: rgb(51, 51, 51); display: block;">&nbsp; &nbsp; 需要:一单到底的业务员一到二名，待遇面谈。（熟悉女装和男款裤子业务的优先.</a><a target="_blank" href="http://tmail.zhihu.com/t?u=aHR0cDovL3d3dy56aGlodS5jb20vcXVlc3Rpb24vNDg1NDUwMDAvYW5zd2VyLzExMTQyNjkxNT91dG1fY2FtcGFpZ249d2Vla2x5MjIzJnV0bV9zb3VyY2U9d2Vla2x5LWRpZ2VzdCZ1dG1fbWVkaXVtPWVtYWls&amp;i=1004596561&amp;l=zhihu&amp;s=27&amp;c=aT0xMDA0NTk2NTYxJmw9emhpaHUmcz0yNw%3D%3D" style="font-size: 13px; line-height: 22px; text-decoration: none; color: rgb(51, 51, 51); display: block;"><br></a></td><td class="zhwd-mobile-hide" width="35">&nbsp;</td><td class="zhwd-mobile-hide" style="vertical-align: top;" valign="top"><br></td></tr></tbody></table></td></tr><tr><td style="font-size: 0px; line-height: 0px;" height="28">&nbsp;</td></tr></tbody></table></td></tr><tr><td style="font-size: 0px; line-height: 0px; border-top: 1px solid rgb(241, 244, 246);" height="35">&nbsp;</td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>精选小知识-<a style="font-size: 17px; font-weight: bold; text-decoration: none; color: rgb(34, 85, 153); border: medium none; outline: medium none;">如何理解服装买手</a></td></tr><tr><td><table class="zhwd-mobile-no-fullwidth" width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style="font-size: 0px; line-height: 0px;" height="15">&nbsp;</td></tr><tr><td width="22"><img src="javascript:;" style="outline: medium none; border: medium none; margin: 0px; padding: 0px; display: block;" height="22" width="22"></td><td width="8"></td><td align="left"><a target="_blank" href="http://tmail.zhihu.com/t?u=aHR0cDovL3d3dy56aGlodS5jb20vcGVvcGxlL2xlbmd5dW5mYXNoaW9uP3V0bV9jYW1wYWlnbj13ZWVrbHkyMjMmdXRtX3NvdXJjZT13ZWVrbHktZGlnZXN0JnV0bV9tZWRpdW09ZW1haWw%3D&amp;i=1004596561&amp;l=zhihu&amp;s=34&amp;c=aT0xMDA0NTk2NTYxJmw9emhpaHUmcz0zNA%3D%3D" style="font-size: 13px; color: rgb(51, 51, 51); text-decoration: none;"><strong>冷芸</strong></a><span style="font-size: 13px; color: rgb(102, 102, 102);">，服装商业顾问/时尚撰稿人</span></td><td class="zhwd-mobile-hide" style="color: rgb(103, 107, 109); font-size: 13px;" align="right"><br></td></tr><tr><td style="font-size: 0px; line-height: 0px;" height="12">&nbsp;</td></tr></tbody></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style=""><a target="_blank" href="http://tmail.zhihu.com/t?u=aHR0cDovL3d3dy56aGlodS5jb20vcXVlc3Rpb24vMjAwMTczMTcvYW5zd2VyLzEwOTE1NDk1OD91dG1fY2FtcGFpZ249d2Vla2x5MjIzJnV0bV9zb3VyY2U9d2Vla2x5LWRpZ2VzdCZ1dG1fbWVkaXVtPWVtYWls&amp;i=1004596561&amp;l=zhihu&amp;s=35&amp;c=aT0xMDA0NTk2NTYxJmw9emhpaHUmcz0zNQ%3D%3D" style="font-size: 13px; line-height: 22px; text-decoration: none; color: rgb(51, 51, 51); display: block;">好吧，在服装业做了近20年，中外看了30多个国家市场，写了本《时装买手实用手册》还算畅销， 所以希望这个回答能给正在买手路上行路的青年人一些靠谱的建议（这并不代表前面的答复不靠谱。 排…<span style="display: inline-block; color: rgb(34, 85, 153);">&nbsp;阅读全文</span></a></td></tr></tbody></table></td></tr><tr><td style="font-size: 0px; line-height: 0px;" height="28">&nbsp;</td></tr></tbody></table></td></tr><tr><td style="font-size: 0px; line-height: 0px; border-top: 1px solid rgb(241, 244, 246);" height="35">&nbsp;</td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style="color: rgb(51, 51, 51); font-size: 16px; font-weight: bold;"><strong>本周日本贸易动态</strong></td></tr><tr><td style="font-size: 0px; line-height: 0px;" height="15">&nbsp;</td></tr><tr><td valign="top"><a target="_blank" href="http://tmail.zhihu.com/t?u=aHR0cDovL3d3dy56aGlodS5jb20vY29sbGVjdGlvbi8yOTI5NjUwMj91dG1fY2FtcGFpZ249d2Vla2x5MjIzJnV0bV9zb3VyY2U9d2Vla2x5LWRpZ2VzdCZ1dG1fbWVkaXVtPWVtYWls&amp;i=1004596561&amp;l=zhihu&amp;s=36&amp;c=aT0xMDA0NTk2NTYxJmw9emhpaHUmcz0zNg%3D%3D" style="border: medium none; text-decoration: none; outline: medium none;"><span style="border: medium none; outline: medium none; font-size: 14px; font-weight: bold; color: rgb(0, 0, 0);">2016大阪展会补贴-南通地区本周内开始申请 &nbsp;</span><span style="border: medium none; outline: medium none; font-size: 14px; color: rgb(34, 85, 153); font-weight: bold;">&nbsp;</span><span style="border: medium none; outline: medium none;">&nbsp;</span></a></td></tr><tr><td style="font-size: 0px; line-height: 0px;" height="15">&nbsp;</td></tr><tr><td valign="top"><br></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="zhwd-mobile-small-footer" style="color: rgb(182, 194, 204); padding: 20px 25px 45px; font-size: 12px; line-height: 17px;" align="center">这封邮件的收件地址是 <a target="_blank" href="mailto:office@go-enter.cn">office@go-en<wbr>ter.cn</a>；<br><br>© 2016 捷行</td>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
           
         
       
@@ -941,6 +763,137 @@
 
 
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/07/17/HowtoStarup/" itemprop="url">
+                  当我创业时,我会想起什么?
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-17T00:00:00+08:00" content="2016-07-17">
+              2016-07-17
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/管理/" itemprop="url" rel="index">
+                    <span itemprop="name">管理</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/17/HowtoStarup/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/17/HowtoStarup/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>当我创业时,我会想起什么?</p>
+</blockquote>
+<p>前几日，和一个好友闲聊，两人同时创业，各自的方向有所不同，跟友人约好写一篇我的历程给她看看。</p>
+<ol>
+<li><p>创业的第一个感悟:</p>
+<ul>
+<li><p>爱惜身体<br>有一餐没一餐，过夜生活（如白天苦战，夜晚苦玩）,随便吃便当. <del>长此以往,一定会疾病缠身.</del></p>
+<p><code>休息好,吃好,吃干净</code></p>
+<p>别学我, 现在一身病,身体是自己的,能爱护的,也只有自己.这个最为重要.</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/17/HowtoStarup/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
@@ -986,7 +939,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
